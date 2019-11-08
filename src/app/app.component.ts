@@ -8,7 +8,7 @@ import { FlexModalService } from './shared-components/flex-modal/flex-modal.serv
 })
 export class AppComponent implements OnInit {
   title = 'final';
-  aboutText: string;
+  aboutText = 'This application is designed by Damian Lee (C) 2019';
   constructor(private flexModal: FlexModalService) {
 
   }
@@ -16,5 +16,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
+  open() {
+    this.flexModal.openDialog('about-modal');
+  }
 
 }
